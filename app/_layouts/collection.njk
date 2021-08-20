@@ -38,7 +38,7 @@
         {% if pagination %}
           <section class="govuk-grid-column-two-thirds">
             <h2 class="govuk-heading-l govuk-!-font-size-27">
-              {{ posts.title or app.posts.title or "Posts" }}
+              {{ guidance.title or app.guidance.title or "guidance" }}
             </h2>
             {{ appDocumentList({
               classes: "govuk-!-margin-bottom-6",
