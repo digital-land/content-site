@@ -1,7 +1,8 @@
 ---
-title: Guidance
+title: "Publish your geographies as data"
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia corporis!
 date: 2021-08-19
+modified: 'now'
 ---
 
 This guidance sets out how to structure and publish geographical data.
@@ -65,12 +66,12 @@ Supplementary information related to the geographical data.
 
 ### entry-date
 
-The date you created or updated the data record in your GIS system or in the CSV. Where possible, use the format YYYY-MM-DD for dates, for example, 2021-02-26.
+The date you created or updated the data record in your GIS system or in the CSV. Where possible, use the format YYYY-MM-DD for dates, for example, `2021-02-26`.
 
 ### start-date
 
-The date the geographical data was first created. Use the format YYYY-MM-DD for dates where possible, for example, 1991-06-12.
+The date the geographical data was first created. Use the format YYYY-MM-DD for dates where possible, for example, `1991-06-12`.
 
 ### end-date
 
-The date the geographical area no longer existed due to a change like a boundary change. Where possible, use the format YYYY-MM-DD for dates. This date can be in the future if the date it will stop being a location or boundary is known, for example, 2025-10-11.
+The date the geographical area no longer existed due to a change like a boundary change. Where possible, use the format YYYY-MM-DD for dates. This date can be in the future if the date it will stop being a location or boundary is known, for example, `2025-10-11`.

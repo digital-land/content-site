@@ -1,4 +1,5 @@
 {% set items = params.items | eleventyNavigationBreadcrumb(params.key) %}
+{{ items | log }}
 <div class="govuk-breadcrumbs{%- if params.classes %} {{ params.classes }}{% endif %}">
   <ol class="govuk-breadcrumbs__list">
   {%- for item in items %}
