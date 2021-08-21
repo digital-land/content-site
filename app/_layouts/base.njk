@@ -2,6 +2,7 @@
 
 {% set htmlClasses = 'no-js' %}
 
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {% from "header/macro.njk" import appHeader %}
 {% from "breadcrumbs/macro.njk" import appBreadcrumbs %}
 
@@ -24,6 +25,14 @@
     productName: app.productName,
     serviceName: app.serviceName
   }) }}
+  <div class="govuk-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Prototype"
+    },
+    html: 'This is a prototype.'
+  }) }}
+  </div>
 {% endblock %}
 
 {% block beforeContent %}
