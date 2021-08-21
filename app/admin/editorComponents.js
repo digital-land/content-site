@@ -1,10 +1,11 @@
-if (CMS) {
+var CMS = CMS || undefined
 
+if (CMS) {
   CMS.registerEditorComponent({
     // Internal id of the component
-    id: "youtube",
+    id: 'youtube',
     // Visible label
-    label: "Youtube",
+    label: 'Youtube',
     // Fields the user need to fill out when adding an instance of the component
     fields: [{name: 'id', label: 'Youtube Video ID', widget: 'string'}],
     // Pattern to identify a block as being an instance of this component
@@ -13,11 +14,11 @@ if (CMS) {
     fromBlock: function(match) {
       return {
         id: match[1]
-      };
+      }
     },
     // Function to create a text block from an instance of this component
-    toBlock: function(obj) {
-      return 'youtube ' + obj.id;
+    toBlock: function toBlock(obj) {
+      return 'youtube ' + obj.id
     },
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)
@@ -27,5 +28,4 @@ if (CMS) {
       );
     }
   });
-
 }
