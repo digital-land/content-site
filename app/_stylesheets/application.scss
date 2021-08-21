@@ -1,0 +1,17 @@
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// App-specific variables
+$app-light-grey: #f8f8f8;
+$app-code-color: #d13118;
+
+@import "govuk/all.scss";
+@import "../_components/all.scss";
+@import "vendor/prism.scss";
+
+@include govuk-media-query($media-type: print) {
+  // Force a white background when printing a page
+  .govuk-template {
+    background: #fff;
+  }
+}
