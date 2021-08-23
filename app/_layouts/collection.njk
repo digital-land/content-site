@@ -14,7 +14,7 @@
     } if title,
     description: {
       html: description | widont | markdown
-    } if description,
+    } if description and eleventyNavigation.key == "home",
     startButton: startButton if startButton,
     image: image if image
   }) %}
@@ -37,9 +37,6 @@
         {# Paginate posts if front matter includes the pagination key #}
         {% if pagination %}
           <section class="govuk-grid-column-two-thirds">
-            <h2 class="govuk-heading-l govuk-!-font-size-27">
-              {{ guidance.title or app.guidance.title or "guidance" }}
-            </h2>
             {{ appDocumentList({
               classes: "govuk-!-margin-bottom-6",
               items: pagination.items

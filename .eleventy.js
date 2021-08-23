@@ -34,6 +34,19 @@ module.exports = function (eleventyConfig) {
   // Transforms
 
   // Collections
+  const collectionsByTag = [
+    {
+      name: 'guidance',
+      tags: ["guidance", "page"]
+    }
+  ]
+
+  collectionsByTag.forEach((element) => {
+    // Get only content that matches a tag
+    eleventyConfig.addCollection(element.name, function(collectionApi) {
+      return collectionApi.getFilteredByTags(element.tags);
+    });
+  })
 
   // Passthrough
   eleventyConfig.addPassthroughCopy('./app/admin')
