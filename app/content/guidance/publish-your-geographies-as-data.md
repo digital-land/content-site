@@ -1,11 +1,15 @@
 ---
-title: "Publish your geographies as data"
-description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia corporis!
+title: Publish your geographies as data
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam
+  quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia
+  corporis!
 date: 2021-08-19
-modified: 'now'
+modified: now
+intro: ""
+location: '{"type":"Polygon","coordinates":[[[-11.2769327,22.7767942],[-9.6539864,23.2580676],[-7.9380915,22.7578914],[-8.1779198,22.1071593],[-7.5056081,21.472803],[-8.4234828,20.746816],[-10.505227,20.4974765],[-10.1348273,21.4933272],[-11.3357361,21.3496495],[-11.040901,22.3165536],[-11.729119,22.3833847],[-11.2769327,22.7767942]]]}'
 ---
-
-This guidance sets out how to structure and publish geographical data.
+This guidance sets out how to structure and publish geographical data. hello
 
 It details what data should be provided and how it should be made available online.
 
@@ -46,6 +50,7 @@ If available, a link to the documentation which contains the authoritative bound
 Policy or relevant legislation related to the geographical data or area, such as conservation areas.
 
 ### organisation
+
 Use the code for the organisation that created the area or boundary. This is usually made up of letters and sometimes numbers. This will allow machines to link the data to the publishing organisation; for example, NFK is the code for Norfolk County Council.
 
 You can use the list of organisations to help you find your organisation code.
