@@ -9,7 +9,7 @@ if (CMS) {
     // Fields the user need to fill out when adding an instance of the component
     fields: [{name: 'id', label: 'Youtube Video ID', widget: 'string'}],
     // Pattern to identify a block as being an instance of this component
-    pattern: /^youtube (\S+)$/,
+    pattern: /{% youtube ([a-zA-Z0-9]+) %}/,
     // Function to extract data elements from the regexp match
     fromBlock: function(match) {
       return {
@@ -18,7 +18,7 @@ if (CMS) {
     },
     // Function to create a text block from an instance of this component
     toBlock: function toBlock(obj) {
-      return 'youtube ' + obj.id
+      return `{% youtube ${obj.id} %}`
     },
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)

@@ -1,10 +1,10 @@
 ---
 title: Publish your geographies as data
+date: 2021-08-19
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam
   quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia
   corporis!
-date: 2021-08-19
 modified: now
 intro: ""
 location: '{"type":"Polygon","coordinates":[[[-11.2769327,22.7767942],[-9.6539864,23.2580676],[-7.9380915,22.7578914],[-8.1779198,22.1071593],[-7.5056081,21.472803],[-8.4234828,20.746816],[-10.505227,20.4974765],[-10.1348273,21.4933272],[-11.3357361,21.3496495],[-11.040901,22.3165536],[-11.729119,22.3833847],[-11.2769327,22.7767942]]]}'

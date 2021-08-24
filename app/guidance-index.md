@@ -2,7 +2,7 @@
 layout: collection
 title: "Guidance"
 permalink: "guidance/index.html"
-description: "We work to make land and housing data easier to find, use and trust. This will lead to better decisions and fewer uncertainties and delays in the housing system, and more new digital services for property and planning."
+description: "As part of our efforts to improve land and housing data we are working with local planning authorities and other users of the data to create guidance around a range of subjects. These will include complying with different requirements for publishing data, mapping data, understanding data definitions and specifications, and more."
 pagination:
   data: collections.all
   reverse: true
