@@ -31,6 +31,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('totalFromRows', require('./lib/filters/total-from-rows'))
   eleventyConfig.addFilter('widont', require('./lib/filters/widont'))
 
+  // shortcodes
+  eleventyConfig.addNunjucksShortcode("govuk", require('./lib/shortcodes/govuk-component'))
+
   // Transforms
 
   // Collections
