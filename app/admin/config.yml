@@ -1,11 +1,17 @@
+# Docs: https://www.netlifycms.org/docs/configuration-options/
 backend:
   name: github
   branch: main
   repo: digital-land/content-site # cms repo
   base_url: https://dl-cms-oauth-service.herokuapp.com # OAuth server
-local_backend: true # when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
+# when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
+local_backend: true
+logo_url: /assets/images/dl-logo.svg
 publish_mode: editorial_workflow
-media_folder: "images/uploads"
+public_folder: /assets/images
+media_folder: assets/images/uploads
+display_url: https://digital-land.info
+site_url: https://digital-land.github.io/
 collections:
   - name: "guidance"
     label: "Guidance pages"
@@ -18,3 +24,5 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
+editor:
+    preview: true

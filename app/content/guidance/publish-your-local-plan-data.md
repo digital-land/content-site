@@ -1,10 +1,8 @@
 ---
 title: Publish your local plan data
-date: 2021-08-24T09:33:58.990Z
+date: 2021-08-26T09:33:58.990Z
 description: Follow our guidance on publishing your local plan as data.
 ---
-{% govuk component="warning-text", text="undefined", iconFallbackText="undefined" %}
-
 [The Town and Country Planning (XXXX) Regulations 2024](http://www.legislation.gov.uk/uksi/2017/403/contents/made) will require all local planning authorities to publish their local plans in a digital format, following nationally prescribed data standards. This guidance will help local planning authorities meet these statutory requirements ensuring their local plans data can be:
 
 * published in a standardised structure and format

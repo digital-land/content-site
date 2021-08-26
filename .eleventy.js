@@ -53,8 +53,8 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough
   eleventyConfig.addPassthroughCopy('./app/admin')
-  eleventyConfig.addPassthroughCopy({ './app/images': '.' })
   eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
+  eleventyConfig.addPassthroughCopy({ './app/images': './assets/images' })
 
   // Enable data deep merge
   eleventyConfig.setDataDeepMerge(true)
