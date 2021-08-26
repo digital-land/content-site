@@ -13,11 +13,5 @@
     {{ appProse({
       prose: content
     }) }}
-
-    {% for collection in screenshots %}
-      {{ appScreenshots(collection) }}
-    {% else %}
-      {{ appScreenshots(screenshots) if screenshots }}
-    {% endfor %}
   {% endcall %}
 {% endblock %}

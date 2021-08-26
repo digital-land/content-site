@@ -11,7 +11,7 @@ publish_mode: editorial_workflow
 public_folder: /assets/images
 media_folder: assets/images/uploads
 display_url: https://digital-land.info
-site_url: https://digital-land.github.io/
+site_url: http://localhost:8080
 collections:
   - name: "guidance"
     label: "Guidance pages"
