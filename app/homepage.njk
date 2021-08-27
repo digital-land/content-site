@@ -1,3 +1,12 @@
+---
+title: "Home"
+permalink: index.html
+description: "We work to make land and housing data easier to find, use and trust. This will lead to better decisions and fewer uncertainties and delays in the housing system, and more new digital services for property and planning."
+eleventyComputed:
+  eleventyNavigation:
+    key: home
+    title: "{{ title }}"
+---
 {% extends "base.njk" %}
 
 {% from "document-list/macro.njk" import appDocumentList %}
@@ -8,9 +17,9 @@
 
 {% block main %}
   {% call appMasthead({
-    classes: "app-masthead--large" if eleventyNavigation.key == "home",
+    classes: "app-masthead--large",
     title: {
-      html: title | widont
+      html: app.productName | widont
     } if title,
     description: {
       html: description | widont | markdown
@@ -62,6 +71,21 @@
               }) }}
             </div>
           {% endif %}
+        {# List sections (pages whose parent is `home`) if homepage with no pagination key set #}
+        {% elif eleventyNavigation.key == "home" %}
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-l govuk-!-font-size-27">
+              {{ sections.title or app.sections.title or "Sections" }}
+            </h2>
+          </div>
+          {% for item in collections.all | eleventyNavigation("home") %}
+            <section class="govuk-grid-column-one-half govuk-!-margin-bottom-6">
+              <h3 class="govuk-heading-m govuk-!-margin-bottom-1">
+                <a href="{{ item.url | url | pretty }}">{{ item.title }}</a>
+              </h3>
+              <p class="govuk-body">{{ item.excerpt }}</p>
+            </section>
+          {% endfor %}
         {% endif %}
       </div>
     {% endblock %}
