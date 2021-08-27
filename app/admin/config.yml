@@ -5,13 +5,13 @@ backend:
   repo: digital-land/content-site # cms repo
   base_url: https://dl-cms-oauth-service.herokuapp.com # OAuth server
 # when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
-local_backend: true
+local_backend: false
 logo_url: /assets/images/dl-logo.svg
 publish_mode: editorial_workflow
 public_folder: /assets/images
 media_folder: assets/images/uploads
-display_url: https://digital-land.info
-site_url: http://localhost:8080
+display_url: https://digital-land.netlify.app
+site_url: https://digital-land.netlify.app
 collections:
   - name: "guidance"
     label: "Guidance pages"
