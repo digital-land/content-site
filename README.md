@@ -19,8 +19,12 @@ The Digital Land content site. Uses [11ty](https://11ty.dev) and [NetlifyCMS](ht
 
 ## Developing locally
 
-1. In terminal switch to the root directory and run `npm run dev`
-2. 2. Open your browser to: `http://localhost:8080` (Browser sync should do this automatically though)
+1. Open the NetlifyCMS configuration file: `app/admin/config.yml` and set `local_backend: true`
+2. In terminal switch to the root directory and run `npx netlify-cms-proxy-server`
+3. In a separate terminal window or multiplexer frame in the root directory run `npm run dev`
+4. 2. Open your browser to: `http://localhost:8080` (Browser sync should do this automatically though)
+
+Full details and troubleshooting can be found in [NetlifyCMS Documentation](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository)
 
 ## Acknowledgements
 
