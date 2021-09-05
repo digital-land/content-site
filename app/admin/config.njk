@@ -1,0 +1,58 @@
+---
+permalink: "{{ page.filePathStem }}.yml"
+---
+# Docs: https://www.netlifycms.org/docs/configuration-options/
+backend:
+  name: github
+  branch: main
+  repo: digital-land/content-site # cms repo
+  base_url: https://dl-cms-oauth-service.herokuapp.com # OAuth server
+
+# when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
+local_backend: {{ "true" if env == "local" else "false" }}
+
+logo_url: /assets/images/dl-logo.svg
+publish_mode: editorial_workflow
+public_folder: /assets/images
+media_folder: assets/images/uploads
+display_url: https://digital-land.netlify.app
+site_url: https://digital-land.netlify.app
+
+collections:
+  - name: "guidance"
+    label: "Guidance pages"
+    label_singular: "Guidance page"
+    folder: "app/content/guidance"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", hint: "A summary of the content in this page" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "project"
+    label: "Project pages"
+    label_singular: "Project page"
+    folder: "app/content/project"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "The document title and primary heading"  }
+      - { label: "Description", name: "description", widget: "text", hint: "A summary of the content in this page" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Updates"
+        name: "updates"
+        widget: "list"
+        summary: '{{fields.title}} - {{ fields.type }}'
+        fields:
+          - {label: "Title", name: "title", widget: "string" }
+          - label: "Category"
+            name: "type"
+            widget: "select"
+            options:
+              - { label: "Decision", value: "decision" }
+              - { label: "Update", value: "update" }
+              - { label: "Learning", value: "learning" }
+          - {label: "Text", name: "text", widget: "markdown" }
+editor:
+    preview: true
