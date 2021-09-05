@@ -31,6 +31,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('totalFromRows', require('./lib/filters/total-from-rows'))
   eleventyConfig.addFilter('widont', require('./lib/filters/widont'))
   eleventyConfig.addFilter('console', require('./lib/filters/console'))
+  eleventyConfig.addFilter('find', require('./lib/filters/find'))
 
   // shortcodes
   eleventyConfig.addNunjucksShortcode("govuk", require('./lib/shortcodes/govuk-component'))
@@ -42,8 +43,12 @@ module.exports = function (eleventyConfig) {
     return [...collection.getFilteredByGlob('./app/content/guidance/*.md')].reverse();
   });
 
+  eleventyConfig.addCollection('projects', collection => {
+    return [...collection.getFilteredByGlob('./app/content/project/*.md')].reverse();
+  });
+
   // Passthrough
-  eleventyConfig.addPassthroughCopy('./app/admin')
+  eleventyConfig.addPassthroughCopy('./app/admin/**/*.!(njk)') // exclude nunjucks templates
   eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })
   eleventyConfig.addPassthroughCopy({ './app/images': './assets/images' })
 

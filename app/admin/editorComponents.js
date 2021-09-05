@@ -57,7 +57,7 @@ if (CMS) {
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)
     toPreview: function(params) {
-      return `<details><summary>${params.summaryText || ''}</summary>${params.text || ''}</details>`;
+      return `<details><summary>${params.summaryText ? params.summaryText : 'Summary text' }</summary>${params.text || ''}</details>`;
     }
   });
 
