@@ -2,7 +2,7 @@
 layout: section-index
 title: "Projects"
 permalink: "project/index.html"
-description: "lorem"
+description: "We're collecting and publishing land and housing data to build a national picture of planning."
 pagination:
   data: collections.projects
   reverse: true

@@ -14,7 +14,7 @@ local_backend: {{ "true" if env == "local" else "false" }}
 logo_url: /assets/images/dl-logo.svg
 publish_mode: editorial_workflow
 public_folder: /assets/images
-media_folder: assets/images/uploads
+media_folder: app/images/uploads
 display_url: https://digital-land.netlify.app
 site_url: https://digital-land.netlify.app
 
@@ -27,6 +27,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text", hint: "A summary of the content in this page" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -38,14 +39,27 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "The document title and primary heading"  }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
       - { label: "Description", name: "description", widget: "text", hint: "A summary of the content in this page" }
+      - label: "Project status"
+        name: "type"
+        widget: "select"
+        hint: "What is the status of this project?"
+        options:
+          - { label: "In progress", value: "inprogress" }
+          - { label: "Ongoing", value: "ongoing" }
+          - { label: "Backlog", value: "backlog" }
+          - { label: "Completed", value: "completed" }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Updates"
         name: "updates"
         widget: "list"
-        summary: '{{fields.title}} - {{ fields.type }}'
+        collapsed: true
+        minimize_collapsed: false
+        summary: "{{ fields.title }}"
         fields:
-          - {label: "Title", name: "title", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
           - label: "Category"
             name: "type"
             widget: "select"
@@ -53,6 +67,21 @@ collections:
               - { label: "Decision", value: "decision" }
               - { label: "Update", value: "update" }
               - { label: "Learning", value: "learning" }
-          - {label: "Text", name: "text", widget: "markdown" }
-editor:
-    preview: true
+          - { label: "Text", name: "text", widget: "markdown", editor_components: [], buttons: ['bold', 'italic', 'link', 'numbered-list', 'bulleted-list'] }
+      - label: "Related links list"
+        name: "related"
+        widget: "list"
+        collapsed: false
+        minimize_collapsed: false
+        summary: "{{ fields.title }}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            collapsed: false
+            minimize_collapsed: false
+            summary: "{{ fields.text }}"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }

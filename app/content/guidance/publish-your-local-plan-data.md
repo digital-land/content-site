@@ -1,5 +1,6 @@
 ---
 title: Publish your local plan data
+hidden: false
 date: 2021-08-26T09:33:58.990Z
 description: Follow our guidance on publishing your local plan as data.
 ---

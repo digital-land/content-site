@@ -1,6 +1,7 @@
 ---
 title: Publish your geographies as data
 date: 2021-08-19
+hidden: false
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam
   quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia

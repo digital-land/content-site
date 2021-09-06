@@ -36,15 +36,19 @@ module.exports = function (eleventyConfig) {
   // shortcodes
   eleventyConfig.addNunjucksShortcode("govuk", require('./lib/shortcodes/govuk-component'))
 
-  // Transforms
-
-  // Collections
-  eleventyConfig.addCollection('guidance', collection => {
-    return [...collection.getFilteredByGlob('./app/content/guidance/*.md')].reverse();
+  // Creates a 'collection' of guidance content but only those that are not set to be hidden
+   eleventyConfig.addCollection('guidance', collection => {
+    return [...collection.getFilteredByGlob('./app/content/guidance/*.md').filter(function(item) {
+      return item.data.hidden === false
+    })].reverse();
   });
 
+
+  // Creates a 'collection' of projects but only those that are not set to be hidden
   eleventyConfig.addCollection('projects', collection => {
-    return [...collection.getFilteredByGlob('./app/content/project/*.md')].reverse();
+    return [...collection.getFilteredByGlob('./app/content/project/*.md').filter(function(item) {
+      return item.data.hidden === false
+    })].reverse();
   });
 
   // Passthrough

@@ -2,6 +2,9 @@
 title: Conservation areas
 description: We are going to explore how we can help Local Authorities make
   Conservation area data available.
+published: true
+hidden: false
+type: inprogress
 updates:
   - title: Added extra data for Lambeth and Southwark
     text: We have collected additional information for conservation areas
@@ -10,6 +13,20 @@ updates:
       additional [associated
       documents](https://digital-land.github.io/document/).
     type: update
+    date: 2021-09-06T13:19:00.716Z
+related:
+  - title: Related artefacts
+    links:
+      - text: BBC
+        url: https://news.bbc.co.uk
+      - text: GOV
+        url: https://gov.uk
+  - title: Related organisations
+    links:
+      - text: Some org name
+        url: https://news.bbc.co.uk
+      - text: Another org name
+        url: https://gov.uk
 ---
 
 A conservation area is an area of environmental or historical interest or importance considered worth preserving or enhancing. They are defined by local authorities and impact on developments as conservation areas are protected against changes by law.
