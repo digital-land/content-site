@@ -3,6 +3,7 @@
 {% set currentSection = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) | find('key', (eleventyNavigation.parent) | lower) %}
 
 {% from "article/macro.njk" import appArticle %}
+{% from "timeline/macro.njk" import appTimeline %}
 {% from "related/macro.njk" import appRelated %}
 {% from "prose/macro.njk" import appProse %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -12,7 +13,8 @@
   {% call appArticle({
     header: {
       title: title | widont,
-      caption: currentSection.title if currentSection
+      caption: currentSection.title if currentSection,
+      status: status if status
     },
     footer: {
       date: page.date,
@@ -21,16 +23,28 @@
   }) %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       {{ appProse({
         prose: content
       }) }}
+
+      {% if updates %}
+        <hr class="govuk-section-break govuk-section-break--l">
+        <h2 class="govuk-heading-l">Updates</h2>
+        {{ appTimeline({
+            items: updates
+        }) }}
+      {% endif %}
+
     </div>
     {% if related %}
     <div class="govuk-grid-column-one-third">
-      {{ appRelated({
-        title: related.title or "Related links",
-        items: related.items
-      }) }}
+      {% for relatedBlock in related %}
+        {{ appRelated({
+          title: relatedBlock.title or "Related links",
+          items: relatedBlock.items
+        }) }}
+      {% endfor %}
     </div>
     {% endif %}
   </div>

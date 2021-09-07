@@ -1,8 +1,18 @@
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
 <article class="app-article">
   {% if params.header %}
   <header class="app-article__header govuk-!-width-two-thirds">
     {% if params.header.caption %}<span class="govuk-caption-xl">{{ params.header.caption }}</span>{% endif %}
-    <h1 class="app-article__title govuk-heading-xl">{{ params.header.title }}</h1>
+    {% if params.header.title %}
+      {% if params.header.status %}
+        <h1 class="app-article__title govuk-heading-xl govuk-!-margin-bottom-3">{{ params.header.title }}</h1>
+        {{ govukTag({ text: params.header.status }) }}
+        <hr class="govuk-section-break govuk-section-break--l">
+      {% else %}
+        <h1 class="app-article__title govuk-heading-xl">{{ params.header.title }}</h1>
+      {% endif %}
+    {% endif %}
   </header>
   {% endif %}
 

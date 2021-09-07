@@ -1,10 +1,9 @@
 ---
 title: Conservation areas
+hidden: false
 description: We are going to explore how we can help Local Authorities make
   Conservation area data available.
-published: true
-hidden: false
-type: inprogress
+status: In progress
 updates:
   - title: Added extra data for Lambeth and Southwark
     text: We have collected additional information for conservation areas
@@ -14,6 +13,15 @@ updates:
       documents](https://digital-land.github.io/document/).
     type: update
     date: 2021-09-06T13:19:00.716Z
+  - date: 2021-04-30T13:15:13.733Z
+    text: Whilst collecting extra data for Lambeth and Southwark we learnt that
+      often there is more than 1 document related to the conservation area. We
+      decided a conservation area, as data, is best represented by
+      a [geography](https://digital-land.github.io/specification/schema/geography/),
+      to describe the area, and a list of
+      related [documents](https://digital-land.github.io/specification/schema/document/).
+    title: A geography and multiple documents
+    type: decision
 related:
   - title: Related artefacts
     links:
@@ -21,15 +29,21 @@ related:
         url: https://news.bbc.co.uk
       - text: GOV
         url: https://gov.uk
-  - title: Related organisations
-    links:
-      - text: Some org name
+    items:
+      - text: Digital Land
+        url: https://digital-land.info
+      - text: Guidance
         url: https://news.bbc.co.uk
-      - text: Another org name
-        url: https://gov.uk
+  - title: Another set of links
+    items:
+      - text: Github
+        url: https://github.com/digital-land/
+published: true
+type: inprogress
 ---
-
 A conservation area is an area of environmental or historical interest or importance considered worth preserving or enhancing. They are defined by local authorities and impact on developments as conservation areas are protected against changes by law.
+
+{% govuk component="details", text="loremfjhfjhfhfuhfhf", summaryText="What is a project" %}
 
 Conservation areas have been around since 1967 which means a lot of the information is locked up in documents. Those historical documents can range from press announcements, archive paper records and PDFs. The boundary defining the conservation area is usually held in a Local authority's GIS (Geographic Information System). GIS software utilises a framework for collecting, analyzing and managing data digitally.
 

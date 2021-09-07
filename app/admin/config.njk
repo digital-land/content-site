@@ -13,7 +13,7 @@ local_backend: {{ "true" if env == "local" else "false" }}
 
 logo_url: /assets/images/dl-logo.svg
 publish_mode: editorial_workflow
-public_folder: /assets/images
+public_folder: /assets/images/uploads
 media_folder: app/images/uploads
 display_url: https://digital-land.netlify.app
 site_url: https://digital-land.netlify.app
@@ -42,14 +42,14 @@ collections:
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
       - { label: "Description", name: "description", widget: "text", hint: "A summary of the content in this page" }
       - label: "Project status"
-        name: "type"
+        name: "status"
         widget: "select"
         hint: "What is the status of this project?"
         options:
-          - { label: "In progress", value: "inprogress" }
-          - { label: "Ongoing", value: "ongoing" }
-          - { label: "Backlog", value: "backlog" }
-          - { label: "Completed", value: "completed" }
+          - { label: "In progress", value: "In progress" }
+          - { label: "Ongoing", value: "Ongoing" }
+          - { label: "Backlog", value: "Backlog" }
+          - { label: "Completed", value: "Completed" }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Updates"
         name: "updates"
@@ -77,7 +77,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - label: "Links"
-            name: "links"
+            name: "items"
             widget: "list"
             collapsed: false
             minimize_collapsed: false
