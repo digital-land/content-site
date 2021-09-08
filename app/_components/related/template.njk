@@ -9,9 +9,9 @@
     <ul class="app-related__list">
     {% for item in params.items %}
       <li class="app-related__list-item">
-        <h3 class="app-related__list-item-title">
+        <{{ headingElement | d('h3') }} class="app-related__list-item-title">
           <a class="govuk-link" href="{{ item.href }}">{{ item.text }}</a>
-        </h3>
+        </{{ headingElement | d('h3') }}>
         {% if item.description %}
         <p class="app-related__list-item-description">{{ item.description | markdown("inline") | safe }}</p>
         {% endif %}

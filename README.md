@@ -35,7 +35,7 @@ Full details and troubleshooting can be found in [NetlifyCMS Documentation](http
 A machine date can be converted to a human readable date using the `date` filter. For example:
 
 ```
-{{ publishDate | date("d LLLL y")}}
+{{ publishDate | date("d LLLL y") }}
 ```
 
 Will output a date formatted like this `4 September 2021`. Other formats can be found in the [documentation for Moment Luxon](https://moment.github.io/luxon/#/formatting)
