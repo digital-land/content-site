@@ -7,17 +7,14 @@ backend:
   branch: main
   repo: digital-land/content-site # cms repo
   base_url: https://dl-cms-oauth-service.herokuapp.com # OAuth server
-
 # when true will assume needs netlify-cms-proxy-server running: npx netlify-cms-proxy-server
 local_backend: {{ "true" if env == "local" else "false" }}
-
 logo_url: /assets/images/dl-logo.svg
 publish_mode: editorial_workflow
 public_folder: /assets/images/uploads
 media_folder: app/images/uploads
 display_url: https://digital-land.netlify.app
 site_url: https://digital-land.netlify.app
-
 collections:
   - name: "guidance"
     label: "Guidance pages"
@@ -25,7 +22,6 @@ collections:
     folder: "app/content/guidance"
     create: true
     slug: {% raw %}"{{ slug }}"{% endraw %}
-    preview_path: {% raw %}"guidance/{{ slug }}"{% endraw%}
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
@@ -38,7 +34,6 @@ collections:
     folder: "app/content/project"
     create: true
     slug: {% raw %}"{{ slug }}"{% endraw %}
-    preview_path: {% raw %}"project/{{ slug }}"{% endraw%}
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "The document title and primary heading"  }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
