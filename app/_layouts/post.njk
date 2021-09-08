@@ -32,7 +32,8 @@
         <hr class="govuk-section-break govuk-section-break--l">
         <h2 class="govuk-heading-l">Updates</h2>
         {{ appTimeline({
-            items: updates
+            items: updates,
+            startdate: startdate | date("MMMM y")
         }) }}
       {% endif %}
 

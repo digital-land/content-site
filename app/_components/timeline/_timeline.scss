@@ -133,15 +133,6 @@ $line-width: 4px;
   }
 }
 
-
-.app-timeline__entry__content {
-  @include govuk-font($size: 19);
-
-  p:not(.govuk-body) {
-    margin: 5px 0;
-  }
-}
-
 .app-sbs__nav__title {
   padding-top: $govuk-gutter-half;
   border-top: 4px solid govuk-colour("blue");

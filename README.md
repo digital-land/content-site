@@ -26,6 +26,20 @@ The Digital Land content site. Uses [11ty](https://11ty.dev) and [NetlifyCMS](ht
 
 Full details and troubleshooting can be found in [NetlifyCMS Documentation](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository)
 
+### Templates
+
+#### Filters
+
+##### Date
+
+A machine date can be converted to a human readable date using the `date` filter. For example:
+
+```
+{{ publishDate | date("d LLLL y")}}
+```
+
+Will output a date formatted like this `4 September 2021`. Other formats can be found in the [documentation for Moment Luxon](https://moment.github.io/luxon/#/formatting)
+
 ## Acknowledgements
 
 Thank you to the community of designers and developers who have developed and documented 11ty and NetlifyCMS for teams like ours to use and benefit from.

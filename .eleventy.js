@@ -39,14 +39,15 @@ module.exports = function (eleventyConfig) {
   // Creates a 'collection' of guidance content but only those that are not set to be hidden
    eleventyConfig.addCollection('guidance', collection => {
     return [...collection.getFilteredByGlob('./app/content/guidance/*.md').filter(function(item) {
+      // will only return items that are not specifically hidden
       return item.data.hidden === false
     })].reverse();
   });
 
-
   // Creates a 'collection' of projects but only those that are not set to be hidden
   eleventyConfig.addCollection('projects', collection => {
     return [...collection.getFilteredByGlob('./app/content/project/*.md').filter(function(item) {
+      // will only return items that are not specifically hidden
       return item.data.hidden === false
     })].reverse();
   });

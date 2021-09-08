@@ -1,5 +1,5 @@
 {% from "prose/macro.njk" import appProse %}
-<ol id="{{ params.id | d('updates') }}" class="app-timeline{{ ' app-timeline--with-starter-label' if params.start }}">
+<ol id="{{ params.id | d('updates') }}" class="app-timeline{{ ' app-timeline--with-starter-label' if params.startdate }}">
   {% for item in params.items %}
     <li class="app-timeline__entry">
         <h3 class="govuk-heading-s app-timeline__entry-heading">{{ item.title }}</h3>
@@ -14,7 +14,9 @@
         </div>
     </li>
   {% endfor %}
-  <li class="app-timeline__start-label">
-    <h4 class="govuk-heading-s">Started September 2020</h4>
-  </li>
+  {% if params.startdate %}
+    <li class="app-timeline__start-label">
+      <h4 class="govuk-heading-s">Started {{ params.startdate }}</h4>
+    </li>
+  {% endif %}
 </ol>
