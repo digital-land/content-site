@@ -24,7 +24,8 @@ collections:
     label_singular: "Guidance page"
     folder: "app/content/guidance"
     create: true
-    slug: "{{slug}}"
+    slug: {% raw %}"{{ slug }}"{% endraw %}
+    preview_path: {% raw %}"guidance/{{ slug }}"{% endraw%}
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
@@ -36,7 +37,8 @@ collections:
     label_singular: "Project page"
     folder: "app/content/project"
     create: true
-    slug: "{{slug}}"
+    slug: {% raw %}"{{ slug }}"{% endraw %}
+    preview_path: {% raw %}"project/{{ slug }}"{% endraw%}
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "The document title and primary heading"  }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
@@ -69,7 +71,7 @@ collections:
               - { label: "Update", value: "update" }
               - { label: "Learning", value: "learning" }
           - { label: "Text", name: "text", widget: "markdown", editor_components: [], buttons: ['bold', 'italic', 'link', 'numbered-list', 'bulleted-list'] }
-      - label: "Related links list"
+      - label: "Related"
         name: "related"
         widget: "list"
         collapsed: false
@@ -82,7 +84,7 @@ collections:
             widget: "list"
             collapsed: false
             minimize_collapsed: false
-            summary: "{{ fields.text }}"
+            summary: {% raw %}"{{ fields.text }}"{% endraw %}
             fields:
               - { label: "Text", name: "text", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }

@@ -39,10 +39,6 @@ related:
         url: https://digital-land.info
       - text: Guidance
         url: https://news.bbc.co.uk
-  - title: Another set of links
-    items:
-      - text: Github
-        url: https://github.com/digital-land/
 published: true
 type: inprogress
 ---
