@@ -22,6 +22,7 @@ collections:
     folder: "app/content/guidance"
     create: true
     slug: {% raw %}"{{slug}}"{% endraw %}
+    preview_path: {% raw %}"guidance/{{ slug }}"{% endraw %}
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
@@ -34,6 +35,7 @@ collections:
     folder: "app/content/project"
     create: true
     slug: {% raw %}"{{slug}}"{% endraw %}
+    preview_path: {% raw %}"project/{{ slug }}"{% endraw %}
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "The document title and primary heading"  }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
