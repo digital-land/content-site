@@ -42,7 +42,7 @@ related:
 published: true
 type: inprogress
 ---
-A conservation area is an area of environmental or historical interest or importance considered worth preserving or enhancing. They are defined by local authorities and impact on developments as conservation areas are protected against changes by law.
+A conservation area is an area of environmental or historical interest or importance considered worth preserving or enhancing. They are defined by local authorities and impact on developments as conservation areas are protected against changes by law..
 
 Conservation areas have been around since 1967 which means a lot of the information is locked up in documents. Those historical documents can range from press announcements, archive paper records and PDFs. The boundary defining the conservation area is usually held in a Local authority's GIS (Geographic Information System). GIS software utilises a framework for collecting, analyzing and managing data digitally.
 
