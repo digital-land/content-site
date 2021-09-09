@@ -37,9 +37,9 @@ collections:
     slug: {% raw %}"{{year}}-{{month}}-{{day}}"{% endraw %}
     preview_path: {% raw %}"weeknotes/{{slug}}"{% endraw %}
     fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text", hint: "A summary of this weeknote" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "project"
