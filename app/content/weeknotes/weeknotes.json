@@ -1,6 +1,7 @@
 {
   "layout": "weeknote",
   "tags": ["weeknote", "page"],
+  "permalink": "/weeknotes/{{ page.date | date('yyyy-MM-dd') }}/index.html",
   "eleventyNavigation": {
     "key": "weeknote-page",
     "parent": "weeknote-index"

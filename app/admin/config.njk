@@ -35,7 +35,7 @@ collections:
     folder: "app/content/weeknotes"
     create: true
     slug: {% raw %}"{{year}}-{{month}}-{{day}}"{% endraw %}
-    preview_path: {% raw %}"weeknotes/{{slug}}"{% endraw %}
+    preview_path: {% raw %}"weeknotes/{{slug}}/"{% endraw %}
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }

@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {% set currentSection = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) | find('key', (eleventyNavigation.parent) | lower) %}
-{% set title = date | date('dd MMMM yy') %}
+{% set title = date | date('dd MMMM yyyy') %}
 
 {% from "article/macro.njk" import appArticle %}
 {% from "timeline/macro.njk" import appTimeline %}
