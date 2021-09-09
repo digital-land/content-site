@@ -6,8 +6,6 @@
 {% from "prose/macro.njk" import appProse %}
 {% from "related/macro.njk" import appRelated %}
 
-
-
 {% block main %}
 
   {% call appMasthead({
@@ -39,6 +37,7 @@
       <div class="govuk-grid-row">
         {# Paginate posts if front matter includes the pagination key #}
         {% if pagination %}
+        {{ pagination.items | console | safe }}
           <section class="govuk-grid-column-two-thirds">
             {{ appDocumentList({
               classes: "govuk-!-margin-bottom-6",

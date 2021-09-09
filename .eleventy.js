@@ -52,6 +52,14 @@ module.exports = function (eleventyConfig) {
     })].reverse();
   });
 
+  // Creates a 'collection' of projects but only those that are not set to be hidden
+  eleventyConfig.addCollection('weeknotes', collection => {
+    return [...collection.getFilteredByGlob('./app/content/weeknotes/*.md').filter(function(item) {
+      // will only return items that are not specifically hidden
+      return item.data.hidden === false
+    })].reverse();
+  });
+
   // Passthrough
   eleventyConfig.addPassthroughCopy('./app/admin/**/*.!(njk)') // exclude nunjucks templates
   eleventyConfig.addPassthroughCopy({ 'node_modules/govuk-frontend/govuk/assets': 'assets' })

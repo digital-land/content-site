@@ -14,7 +14,7 @@ publish_mode: editorial_workflow
 public_folder: /assets/images/uploads
 media_folder: app/images/uploads
 display_url: https://digital-land.netlify.app
-site_url: https://digital-land.netlify.app
+site_url: {{ "http://localhost:8080" if env == "local" else "https://digital-land.netlify.app" }}
 collections:
   - name: "guidance"
     label: "Guidance pages"
@@ -27,7 +27,20 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text", hint: "A summary of the content in this page" }
+      - { label: "Description", name: "description", widget: "text", hint: "A summary of this guidance" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "weeknotes"
+    identifier_field: date
+    label: "Weeknotes"
+    label_singular: "Weeknote"
+    folder: "app/content/weeknotes"
+    create: true
+    slug: {% raw %}"{{year}}-{{month}}-{{day}}"{% endraw %}
+    preview_path: {% raw %}"weeknotes/{{slug}}"{% endraw %}
+    fields:
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false, hint: "Hides this content from the site. Defaults to false." }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text", hint: "A summary of this weeknote" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "project"
     label: "Project pages"

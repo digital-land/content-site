@@ -1,0 +1,14 @@
+{
+  "layout": "weeknote",
+  "tags": ["weeknote", "page"],
+  "eleventyNavigation": {
+    "key": "weeknote-page",
+    "parent": "weeknote-index"
+  },
+  "eleventyComputed": {
+    "eleventyNavigation": {
+      "title": "{{ title }}",
+      "excerpt": "{{ description }}"
+    }
+  }
+}
