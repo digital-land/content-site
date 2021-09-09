@@ -14,8 +14,6 @@ It details what data should be provided and how it should be made available onli
 
 A geography can be any area, location, site or boundary you have created and these two images show what the data looks like.
 
-![Al text](/assets/images/uploads/square_logo_mhclg.png "Logo")
-
 **Boundary**
 
 [![Site boundary](https://res.cloudinary.com/digital-land/image/upload/v1626864208/digital-land.github.io_conservation-area_stonesfield_btkguo.png)](https://res.cloudinary.com/digital-land/image/upload/v1626864208/digital-land.github.io_conservation-area_stonesfield_btkguo.png)
@@ -35,8 +33,6 @@ Each record must contain a boundary, polygon or site point.
 ## Publishing as GeoJSON, shapefiles or KML
 
 GeoJson, a shapefile or KML consists of data for the shape or point, and a number of attributes containing data about the geography.
-
-{% govuk component="details", text="Phone Matt", summaryText="Get help with your data" %}
 
 Each record should include the following attributes:
 
