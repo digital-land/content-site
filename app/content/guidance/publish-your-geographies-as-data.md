@@ -1,14 +1,13 @@
 ---
 title: Publish your geographies as data
-date: 2021-08-19
 hidden: false
+date: 2021-08-19
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam
   quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia
   corporis!
 modified: now
 ---
-
 This guidance sets out how to structure and publish geographical data.
 
 It details what data should be provided and how it should be made available online.
