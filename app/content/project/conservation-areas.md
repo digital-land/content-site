@@ -1,8 +1,8 @@
 ---
 title: Conservation areas
 hidden: false
-description: We are going to explore how we can help Local Authorities make
-  Conservation area data available.
+description: "We are going to explore how we can help Local Authorities make
+  Conservation area data available. "
 startdate: 2021-09-08T11:01:05.299Z
 status: In progress
 updates:
