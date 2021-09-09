@@ -18,8 +18,14 @@
     padding-top: 5px;
   }
 
-  .app-header__logotype-text {
-    @include govuk-font($size: 24, $weight: bold);
+  .app-header__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .app-header__logotype-text,
+  .app-header__link--service-name {
+    @include govuk-font($size: 27, $weight: bold);
   }
 
 }

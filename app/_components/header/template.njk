@@ -1,12 +1,33 @@
 <header class="govuk-header app-header" role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container app-header__container">
+    {% if params.logo %}
     <div class="govuk-header__logo app-header__logo">
       <a href="{{ params.homepageUrl | default('/') }}" class="govuk-header__link govuk-header__link--homepage">
           <span class="govuk-header__logotype-text app-header__logotype-text">
-            Digital Land
+            MHCLG
           </span>
         </span>
       </a>
+    </div>
+    {% endif %}
+    <div class="govuk-header__content app-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--service-name app-header__link--service-name">
+        Digital Land
+      </a>
+      {% if params.navigation %}
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+      <nav>
+        <ul id="navigation" class="govuk-header__navigation" aria-label="Navigation menu">
+        {% for item in params.navigation.items %}
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="{{ item.url }}">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
     </div>
   </div>
 </header>
