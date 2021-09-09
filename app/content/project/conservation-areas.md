@@ -16,8 +16,8 @@ updates:
 
 
       Another paragraph here
-    type: update
-    date: 2021-09-06T13:19:00.716Z
+    type: decision
+    date: 2021-09-08T13:19:00.716Z
   - date: 2021-04-30T13:15:13.733Z
     text: Whilst collecting extra data for Lambeth and Southwark we learnt that
       often there is more than 1 document related to the conservation area. We
@@ -27,6 +27,10 @@ updates:
       related [documents](https://digital-land.github.io/specification/schema/document/).
     title: A geography and multiple documents
     type: decision
+  - date: 2021-09-09T14:33:51.107Z
+    title: Paul S is sick of his own voice
+    type: learning
+    text: djhdjdkjdkjd
 related:
   - title: Related artefacts
     links:
