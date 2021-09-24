@@ -39,6 +39,10 @@ related:
         url: https://digital-land.info
       - text: Guidance
         url: https://news.bbc.co.uk
+  - title: Related guidance
+    items:
+      - text: Link text
+        url: https://news.bbc.co.uk
 published: true
 type: inprogress
 ---
