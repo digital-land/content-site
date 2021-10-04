@@ -12,6 +12,7 @@ init({
       repo: "digital-land/content-site",
       base_url: "https://dl-cms-oauth-service.herokuapp.com",
     },
+    load_config_file: false,
     local_backend: process.env.NODE_ENV,
     logo_url: "/assets/images/dl-logo.svg",
     publish_mode: "editorial_workflow",
