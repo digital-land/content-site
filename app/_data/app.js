@@ -1,19 +1,15 @@
 module.exports = {
-  productName: 'Digital Land',
+  productName: "Digital Land",
   navigation: {
     items: [
       {
-        text: "Weeknotes",
-        url: "/weeknotes"
-      },
-      {
         text: "Guidance",
-        url: "/guidance"
+        url: "/guidance",
       },
       {
         text: "Projects",
-        url: "/project"
-      }
-    ]
-  }
-}
+        url: "/project",
+      },
+    ],
+  },
+};
