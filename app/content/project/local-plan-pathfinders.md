@@ -33,6 +33,11 @@ updates:
 
 
       This list isn't exhaustive and some of the areas may not apply or be considered important to all local planning authorities.
+related:
+  - title: Planning white paper
+    items:
+      - url: https://www.gov.uk/government/consultations/planning-for-the-future
+        text: Planning white paper
 ---
 ## Why we are looking at local plan pathfinders
 
