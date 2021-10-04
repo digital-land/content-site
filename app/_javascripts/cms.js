@@ -60,45 +60,6 @@ init({
         ],
       },
       {
-        name: "weeknotes",
-        label: "Weeknotes",
-        label_singular: "Weeknote",
-        folder: "app/content/weeknotes",
-        create: true,
-        slug: "{{year}}-{{month}}-{{day}}",
-        preview_path: "weeknotes/{{slug}}/",
-        fields: [
-          {
-            label: "Title",
-            name: "title",
-            widget: "string",
-          },
-          {
-            label: "Hidden",
-            name: "hidden",
-            widget: "boolean",
-            default: false,
-            hint: "Hides this content from the site. Defaults to false.",
-          },
-          {
-            label: "Publish Date",
-            name: "date",
-            widget: "datetime",
-          },
-          {
-            label: "Description",
-            name: "description",
-            widget: "text",
-            hint: "A summary of this weeknote",
-          },
-          {
-            label: "Body",
-            name: "body",
-            widget: "markdown",
-          },
-        ],
-      },
-      {
         name: "project",
         label: "Project pages",
         label_singular: "Project page",
