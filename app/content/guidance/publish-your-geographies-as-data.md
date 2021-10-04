@@ -8,10 +8,6 @@ description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   corporis!
 modified: now
 ---
-## Grace is ace!
-
-### Grace is double ace
-
 This guidance sets out how to structure and publish geographical data.
 
 It details what data should be provided and how it should be made available online.
