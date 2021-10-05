@@ -126,7 +126,7 @@ init({
             widget: "list",
             collapsed: true,
             minimize_collapsed: false,
-            summary: "{{ fields.title }}",
+            summary: "{{fields.title}}",
             fields: [
               {
                 label: "Title",
@@ -178,7 +178,7 @@ init({
             widget: "list",
             collapsed: false,
             minimize_collapsed: false,
-            summary: "{{ fields.title }}",
+            summary: "{{fields.title}}",
             fields: [
               {
                 label: "Title",
@@ -191,7 +191,7 @@ init({
                 widget: "list",
                 collapsed: false,
                 minimize_collapsed: false,
-                summary: "{{ fields.text }}",
+                summary: "{{fields.text}}",
                 fields: [
                   {
                     label: "Text",
