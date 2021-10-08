@@ -1,18 +1,24 @@
 ---
 title: Publish your geographies as data
 hidden: false
-date: 2021-08-19
+date: 2021-08-18T23:00:00.000Z
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit.
   Architecto quos sunt soluta. Suscipit ratione ipsa soluta aliquid numquam
   quidem laboriosam animi porro sit minima perferendis hic fugit vitae, quia
   corporis!
 modified: now
 ---
+dkjddkjdid
+
+{% govuk component="details", text="dsjkhdjfhjkhfkjhfkjhfjhf", summaryText="Find out about GEOJSON" %}
+
 This guidance sets out how to structure and publish geographical data.
 
 It details what data should be provided and how it should be made available online.
 
 A geography can be any area, location, site or boundary you have created and these two images show what the data looks like.
+
+## Heading
 
 **Boundary**
 
