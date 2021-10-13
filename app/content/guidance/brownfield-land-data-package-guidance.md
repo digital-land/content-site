@@ -4,8 +4,6 @@ hidden: false
 date: 2021-10-13T14:22:55.813Z
 description: A first iteration of guidance for using the brownfield land data package.
 ---
-# Description
-
 The [Town and Country Planning (Brownfield Land Register) Regulations 2017](http://www.legislation.gov.uk/uksi/2017/403/contents/made) require local planning authorities to maintain a register of their brownfield sites that are suitable for housing.
 
 Digital Land have collected the brownfield land registers published by each local planning authority and built a national register.
