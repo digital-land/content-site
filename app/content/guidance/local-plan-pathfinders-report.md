@@ -135,7 +135,7 @@ They were also keen to access data through APIs and Digital Land already has a m
 
 However, they wanted data more frequently than LPAs usually supply. LPAs update their sites data either quarterly to annually, depending on staff capacity.  
 
-PropTech companies spend a lot of time and resources trying to access local authority sites and boundaries data. They currently scrape available data from the London Data Store, DEFRA’s Magic map, the Greater London Authority (GLA), local authority interactive maps (where they exist), and Google Imaging. Some PropTech companies pay for access to Ordnance Survey and Land Registry data. While others have created tools to translate LPA PDFs and hand drawn map boundaries into machine readable data. At times, finding the right document often required hiring a professional with knowledge of what to look for.
+PropTech companies spend a lot of time and resources trying to access local authority sites and boundaries data. They currently scrape available data from the [London Data Store](https://data.london.gov.uk/), DEFRA’s Magic map, local authority interactive maps (where they exist), and Google Imaging. Some PropTech companies pay for access to Ordnance Survey and Land Registry data. While others have created tools to translate LPA PDFs and hand drawn map boundaries into machine readable data. At times, finding the right document often required hiring a professional with knowledge of what to look for.
 
 ### Sites data tools and challenges
 
